@@ -10,7 +10,10 @@ puts "Exercise 7"
 puts "----------"
 
 user_input = gets.chomp
-Store.create!(
+new_store = Store.create(
   name: user_input
 )
 
+new_store.errors.messages.each do |msg|
+  puts msg
+end
