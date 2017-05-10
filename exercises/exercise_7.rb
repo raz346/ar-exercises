@@ -9,4 +9,8 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+user_input = gets.chomp
+Store.create!(
+  name: user_input
+)
+
